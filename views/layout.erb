@@ -12,13 +12,23 @@
     <link rel="stylesheet" href="application.css">
   </head>
   <body>
-  <h1>Welcome to my first Sinatra page</h1>
+    <div class="intro-text">
+      <h1>Sinatra Cookbook</h1>
+      <p>Welome to the cookbook project converted for Sinatra. I'm afraid the code isn't very clean or well documented but your welcome to download a copy or branch it on github</p>
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <%= yield %>
-        </div>
+      <div class="inner-container">
+        <nav class = "nav-bar">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="https://github.com/MichaelSimmonds/cookbook-sinatra" class="nav-link">Github Link</a></li>
+            <li class="nav-item"><a href="https://www.youtube.com/watch?v=xfr64zoBTAQ" class="nav-link">Special news</a></li>
+          </ul>
+        </nav>
       </div>
+    </div>
+    <div class="container">
+          <%= yield %>
     </div>
 
 

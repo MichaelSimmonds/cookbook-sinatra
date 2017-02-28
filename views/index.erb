@@ -1,10 +1,50 @@
-<p>
-  I'm in a <em>view</em>!
-</p>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-section">
+        <h3>Add a recipe</h3>
+        <form action="/add_confirmation" method="POST">
+          <input type="text" name="recipe_name" value="name">
+          <input type="text" name="recipe_desc" value="description">
+          <input type="submit">
+        </form>
+      </div>
+
+      <div class="form-section">
+        <h3>Remove a recipe</h3>
+        <p>enter the recipe number you would like removed</p>
+        <form action="/remove_confirmation" method="POST">
+          <input type="number" name="recipe_index" value="1">
+          <input type="submit">
+        </form>
+      </div>
+
+      <div class="form-section ">
+        <h3>Find new recipe</h3>
+        <p>enter and ingredient and a difficulty 1-easy 4-hard</p>
+        <form action="/find_recipe" method="POST">
+          <input type="text" name="search_name" value="cheese">
+          <input type="number" name="search_difficulty" value="2" min="1" max="4">
+          <input type="submit">
+        </form>
+      </div>
+
+    </div>
+      <div class="col-sm-6">
+        <div class="form-section recipe-list">
+        <h3>Heres a list of the recipes</h3>
+        <ol>
+          <% @recipes.each do |recipe| %>
+            <li>
+              <%= recipe.name %>
+              <ul><%= recipe.description %></ul>
+
+            </li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
 
 
-<% @usernames.each do |username| %>
-  <li>
-    <%= username %>
-  </li>
-<% end %>
+<!-- <a href="/add">Add another dish</a> -->
