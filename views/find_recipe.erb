@@ -1,17 +1,19 @@
 <h3>Your results</h3>
 <div class="form-section">
-  <h3>Remove a recipe</h3>
+  <h3>Select a recipe</h3>
   <p>enter the recipe number you would like to add</p>
   <form action="/add_search_confirmation" method="POST">
     <input type="number" name="search_recipe_index" value="1">
     <input type="submit">
   </form>
 </div>
-<ol class = "recipe-list">
-  <% @results.each do |result| %>
-    <li>
-      <%= result[0] %>
-      <ul><%= result[1] %></ul>
-    </li>
-  <% end %>
-</ol>
+<div class="form-section">
+  <ol class = "recipe-list">
+    <% @results.each do |result| %>
+      <li>
+        <%= result[0] %>
+        <ul><%= result[1] %></ul>
+      </li>
+    <% end %>
+  </ol>
+</div>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Cookbook Sinatra</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
@@ -21,8 +22,7 @@
         <nav class = "nav-bar">
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="https://github.com/MichaelSimmonds/cookbook-sinatra" class="nav-link">Github Link</a></li>
-            <li class="nav-item"><a href="https://www.youtube.com/watch?v=xfr64zoBTAQ" class="nav-link">Special news</a></li>
+            <li class="nav-item"><a href="https://github.com/MichaelSimmonds/cookbook-sinatra" class="nav-link" target="_blank">Github Link</a></li>
           </ul>
         </nav>
       </div>
@@ -30,7 +30,9 @@
     <div class="container">
           <%= yield %>
     </div>
-
+    <div class="footer">
+      <p>Made by <a href="http://www.github.com/michaelsimmonds">Michael Simmonds</a> whilst studying at <a href="http://www.lewagon.com">Le Wagon</a></p>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
